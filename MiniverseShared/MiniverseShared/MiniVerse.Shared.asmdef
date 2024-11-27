@@ -1,7 +1,7 @@
 {
 	"name": "MiniVerse.Shared",
 	"references": [
-		"MessagePack",
+		"MessagePack.Annotations",
 		"MagicOnion.Abstractions"
 	]
 }
