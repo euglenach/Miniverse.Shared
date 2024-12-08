@@ -8,11 +8,12 @@ namespace MiniverseShared.StreamingHubs
     public interface IMatchingHub : IStreamingHub<IMatchingHub, IMatchingReceiver>
     {
         ValueTask CreateRoomAsync(Player player);
+        ValueTask JoinRoomAsync(Ulid roomUlid, Player player);
     }
 
     public interface IMatchingReceiver
     {
-        void OnJoin();
-        void OnLeave();
+        void OnJoin(Player player);
+        void OnLeave(Player player);
     }
 }

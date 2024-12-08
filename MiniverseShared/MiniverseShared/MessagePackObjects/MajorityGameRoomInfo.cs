@@ -4,9 +4,13 @@ using MessagePack;
 namespace MiniverseShared.MessagePackObjects
 {
     [MessagePackObject]
-    public record Player
+    public record MajorityGameRoomInfo
     {
         [Key(0)] public Ulid Ulid { get; set; }
-        [Key(1)] public string Name{ get; set; }
+
+        public MajorityGameRoomInfo(Ulid ulid)
+        {
+            Ulid = ulid;
+        }
     }
 }
