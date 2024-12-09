@@ -14,6 +14,7 @@ namespace MiniverseShared.StreamingHubs
     public interface IMatchingReceiver
     {
         void OnJoin(Player player);
+        void OnJoinSelf(MajorityGameRoomInfo roomInfo);
         void OnLeave(Player player);
     }
 }
