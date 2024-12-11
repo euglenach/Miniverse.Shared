@@ -8,5 +8,11 @@ namespace MiniverseShared.MessagePackObjects
     {
         [Key(0)] public Ulid Ulid { get; set; }
         [Key(1)] public string Name{ get; set; }
+
+        public Player(Ulid ulid, string name)
+        {
+            Ulid = ulid;
+            Name = name;
+        }
     }
 }
