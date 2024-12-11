@@ -9,5 +9,12 @@ namespace MiniverseShared.MessagePackObjects
         [Key(0)] public Ulid AskedPlayerUlid { get; set; }
         [Key(1)] public string QuestionText {get; set; }
         [Key(2)] public string[] Choices { get; set; }
+
+        public MajorityGameQuestion(Ulid askedPlayerUlid, string questionText, string[] choices)
+        {
+            AskedPlayerUlid = askedPlayerUlid;
+            QuestionText = questionText;
+            Choices = choices;
+        }
     }
 }
