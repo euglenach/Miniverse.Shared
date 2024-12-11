@@ -6,8 +6,8 @@ namespace MiniverseShared.Utility
 {
     public static class ValueTaskExtensions
     {
-        public static Action<Exception> unhandledExceptionHandler
-            = e => Console.WriteLine("UnhandledException: " );
+        private static Action<Exception> unhandledExceptionHandler
+            = e => Console.WriteLine("UnhandledException: " + e);
 
         public static void RegisterUnhandledExceptionHandler(Action<Exception> unhandledExceptionHandler)
         {
