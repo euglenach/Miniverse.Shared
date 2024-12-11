@@ -7,15 +7,15 @@ namespace MiniverseShared.StreamingHubs
 {
     public interface IMajorityGameHub : IStreamingHub<IMajorityGameHub, IMajorityGameReceiver>
     {
-        ValueTask AskQuestion(string questionText);
+        ValueTask AskQuestion(string questionText, string[] choices);
         ValueTask Select(int index);
-        ValueTask ResultAsync();
+        ValueTask ResultOpen();
     }
     
     public interface IMajorityGameReceiver
     {
         void OnAskedQuestion(MajorityGameQuestion question);
-        void OnSelected(Ulid answerPlayerUlid, int index);
+        void OnSelected(Ulid selectedPlayerUlid, int index);
         void OnResult(MajorityGameResult result);
     }
 }
