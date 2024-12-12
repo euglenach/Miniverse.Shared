@@ -15,6 +15,6 @@ namespace MiniverseShared.StreamingHubs
     {
         void OnJoin(Player player);
         void OnJoinSelf(MajorityGameRoomInfo roomInfo);
-        void OnLeave(Player player);
+        void OnLeave(Ulid playerUlid);
     }
 }

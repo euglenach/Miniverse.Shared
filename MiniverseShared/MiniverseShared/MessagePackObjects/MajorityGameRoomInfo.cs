@@ -9,11 +9,13 @@ namespace MiniverseShared.MessagePackObjects
     {
         [Key(0)] public Ulid Ulid { get; set; }
         [Key(1)] public List<Player> Players{get;set;}
+        [Key(3)] public MajorityGameQuestion? Question { get; set; }
 
-        public MajorityGameRoomInfo(Ulid ulid, List<Player> players)
+        public MajorityGameRoomInfo(Ulid ulid, List<Player> players, MajorityGameQuestion? question)
         {
             Ulid = ulid;
             Players = players;
+            Question = question;
         }
     }
 }

@@ -14,6 +14,7 @@ namespace MiniverseShared.StreamingHubs
     
     public interface IMajorityGameReceiver
     {
+        void OnConnected();
         void OnAskedQuestion(MajorityGameQuestion question);
         void OnSelected(Ulid selectedPlayerUlid, int index);
         void OnResult(MajorityGameResult result);
